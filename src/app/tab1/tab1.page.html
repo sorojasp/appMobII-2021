@@ -1,17 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header [translucent]="true" >
+  
+  <ion-toolbar color="optional">
+    <ion-buttons slot="start">
+      <div style="zoom:2">
+      <ion-icon name="dice-outline"></ion-icon>
+    </div>
+    </ion-buttons>
+
+    <ion-title>App</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div style="padding:10px">
+  <ion-button color="primary" expand="block" >Click</ion-button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Vegueta</ion-card-subtitle>
+      <ion-card-title>Sajajin Price</ion-card-title>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <img src="assets/img/vegeta.jpg" style="padding:5px">
+  
+    <ion-card-content>
+      <p class="paragraph">
+      Vegueta is a Sajajin prince to come to the earth to kill Goku, 
+      But was
+    </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+</div>
 </ion-content>
