@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  public name = "Stiven Rojas";
+  public age = 35;
+  public single=true;
+
+  public img_BDZ="assets/img/vegeta.jpg";
+
+  constructor() { }
 
 }

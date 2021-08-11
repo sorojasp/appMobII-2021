@@ -3,7 +3,7 @@
   <ion-toolbar color="optional">
     <ion-buttons slot="start">
       <div style="zoom:2">
-      <ion-icon name="dice-outline"></ion-icon>
+      <ion-icon name="dice-outline" ></ion-icon>
     </div>
     </ion-buttons>
 
@@ -13,7 +13,8 @@
 
 <ion-content [fullscreen]="true">
   <div style="padding:10px">
-  <ion-button color="primary" expand="block" >Click</ion-button>
+  <ion-button color="primary" expand="block" 
+  (click)="capturarClick()">Click</ion-button>
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Vegueta</ion-card-subtitle>
@@ -34,6 +35,8 @@
     <ion-label position="floating">Name</ion-label>
     <ion-input></ion-input>
   </ion-item>
+
+  <app-son></app-son>
   
 </div>
 </ion-content>
