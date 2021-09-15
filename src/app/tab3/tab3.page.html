@@ -7,11 +7,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div style="padding:10px" >
+    <ion-text *ngIf="this.showMsg">
+      You know why the moon is so lonely? 'Cause she used to have a lover.
+    </ion-text>
+
+    <ion-list>
+      <ion-item *ngFor="let name of this.names">
+        <ion-text>{{name}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+  
+
+  <ion-button expand="block" (click)="showOrNotShow()">Do it</ion-button>
+</div>
+
+
+
 </ion-content>

@@ -5,9 +5,9 @@
 
 
         <ion-avatar>
-          
-            <ion-img [src]="this.img_BDZ"></ion-img>
-        
+
+          <ion-img [src]="this.img_BDZ"></ion-img>
+
         </ion-avatar>
       </ion-button>
       <ion-button>
@@ -16,8 +16,8 @@
 
     </ion-buttons>
     <ion-buttons slot="primary">
-      <ion-button color="secondary">
-        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      <ion-button color="secondary" (click)="this.presentAsideMenu($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical" ></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Default Buttons</ion-title>
@@ -46,6 +46,27 @@
         <p style="font-weight: bold;">{{this.single }}</p>
       </ion-text>
 
+      <h1 style="color: blue;">Double Bindings</h1>
+
+      <ion-item>
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input [(ngModel)]="this.name_form" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input  type="email "[(ngModel)]="this.email_form"></ion-input>
+      </ion-item>
+
+
+      <p>{{this.name_form}}</p>
+      <p>{{this.email_form}}</p>
+
+      <ion-button expand="block" color="tertiary" 
+      (click)="sendData()">send Data</ion-button>
+
+
+
     </div>
 
     <div>
@@ -57,6 +78,15 @@
       </ion-img>
 
     </div>
+
+
+    <ion-button expand="block" color="tertiary" 
+    (click)="this.catchEvent($event)">
+
+      <ion-icon style="padding-right: 5px;" name="football-outline">
+      </ion-icon>
+      click
+    </ion-button>
 
   </div>
 </ion-content>

@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  public names=['Valentina', 'Elian','Camilo','Jeison','Stiven','David'];
+  public showMsg=true;
+
   constructor() {}
+
+  public showOrNotShow(){
+
+    this.showMsg=!this.showMsg;
+
+  }
 
 }
